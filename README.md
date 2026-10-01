@@ -1,4 +1,4 @@
-# Urban development–climate evidence extraction
+# Urban development–action-climate evidence extraction
 
 Python 3.10+; standard library only. Fill `data/input_sample.csv` with one
 article per row and unique DOI values. The supplied header-only file is a
