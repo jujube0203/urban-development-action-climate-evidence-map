@@ -1,4 +1,4 @@
-# Urban development–action-climate evidence extraction
+# Urban development–climate evidence extraction
 
 Python 3.10+; standard library only. Fill `data/input_sample.csv` with one
 article per row and unique DOI values. The supplied header-only file is a
@@ -32,8 +32,14 @@ step files. Each extraction request is a separate API call. The
 successful model JSON is retained in each provider/run CSV. Re-running a
 provider/run command resumes from saved successful rows.
 
-`data/urban_climate_evidence_dataset.xlsx` is the accompanying full research
-dataset. `data/city_attributes.xlsx` contains one row per matched city ID
-with the city attributes used in the analyses. Running this sample workflow
-creates new outputs in `output/`; it does not overwrite either supplied data
-file.
+`data/city_attributes.xlsx` contains one row per matched city ID with the city
+attributes used in the analyses. The full research dataset is not included in
+this package. Running this sample workflow creates new outputs in `output/`;
+it does not overwrite the supplied data files.
+
+## License and data permissions
+
+The Python code and workflow documentation are licensed under the MIT License
+in `LICENSE`. Data files have separate reuse considerations described in
+`data/README.md`. Verify redistribution rights and record source attribution
+before making externally sourced data public.
