@@ -12,11 +12,10 @@ LINKAGE: Identify the primary development topic that the implementer's action ad
 The authors' research objective and incidental benefits supply no implementer goal. A phrase's appearance alone supplies no relation. If a need or action cannot be connected from the text, leave that field and its categories empty.
 Select the primary intervention, or an integrated intervention studied as a unit. Keep its own purpose and outcomes together. Analytical tools qualify as actions when their deployment is the intervention; otherwise classify the supported action.
 
-TOPIC/ACTION: Select one development category and one matching major/subcategory below; prefer the specific supported subcategory, never invent labels. development_topic MUST be exactly one label from DEVELOPMENT CATEGORIES or "". Major_categories_action MUST be exactly one major-category label from ACTION TAXONOMY or "". Sub_categories_Action MUST be exactly one permitted subcategory under that selected major category or "". Never create, paraphrase, shorten, combine or modify taxonomy labels.
-
-For development_topic, prioritize specific development purposes over Urban Resilience and Risk Reduction. For example, coastal/marine issues -> Coastal and Marine Development; vulnerable groups, poverty or equity -> Poverty & Social Equity; urbanization or infrastructure development -> Sustainable Infrastructure and Urbanization; green economy, clean-energy growth or economic transition -> Green Energy and Economy Transition. Use Urban Resilience and Risk Reduction only when resilience or risk reduction is the primary development purpose and no more specific topic applies. 
+TOPIC/ACTION: Select one development category and one matching major/subcategory below; prefer the specific supported subcategory, never invent labels. development_topic MUST be exactly one label from DEVELOPMENT CATEGORIES or "". Major_categories_action MUST be exactly one major-category label from ACTION TAXONOMY or "". Sub_categories_Action MUST be exactly one permitted subcategory under that selected major category or "". Never create, paraphrase, shorten, combine or modify taxonomy labels. Preserve development_topic_original and action_original from Round 1, or refine them only to a better contiguous phrase in the source text for the same linked purpose and action.
+For development_topic, prioritize specific development purposes over Urban Resilience and Risk Reduction. For example, coastal/marine issues -> Coastal and Marine Sustainability; vulnerable groups, poverty or equity -> Social Equity and Inclusive Services; urbanization or infrastructure development -> Sustainable Infrastructure and Urban Development; green economy, clean-energy growth or economic transition -> Green Energy and Economic Transition. Use Urban Resilience and Risk Reduction only when resilience or risk reduction is the primary development purpose and no more specific topic applies. 
 Policies, market/funding instruments qualify as primary interventions. Research/planning/assessment tools map to the intervention they support unless their deployment is itself the intervention. Integrated Knowledge or Governance -> Transition knowledge/Government / Integrated Knowledge/Governance. Policy, market & funding instruments covers policy/market/funding interventions lacking a more specific subcategory. Green and blue infrastructure requires integrated vegetation and water; vegetation alone -> Green infrastructure, unless a more specific category applies.
-Examples: bus-only lane -> Transport & Mobility / Public transport; tree canopy expansion -> Nature-based & Ecosystem / Urban afforestation; building retrofit -> Construction & Building / Improvement building stock.
+Examples: bus-only lane -> Transport & Mobility / Public transport; tree canopy expansion -> Nature-based & Ecosystem / Green infrastructure; building retrofit -> Construction & Building / Improvement building stock.
 
 CLIMATE: Code explicit reported results linked to the same action, preserving negation, uncertainty, comparators and hypothetical conditions. mitigation MUST be exactly "positive", "negative", or "". adaptation MUST be exactly "positive", "negative", or "". No other value, qualifier, explanation, uncertainty label or alternative wording is permitted in these two fields.
 
@@ -32,6 +31,7 @@ Research_type MUST be exactly one of: "Empirical", "Mixed", "Non-empirical", or 
 STRICT OUTPUT VALUE CONSTRAINTS:
 - development_topic: exactly one DEVELOPMENT CATEGORIES label, or "".
 - development_topic_original: contiguous original-text phrase <=5 whitespace-separated words, or "".
+- action_original: contiguous original-text phrase <=5 whitespace-separated words, or "".
 - Major_categories_action: exactly one ACTION TAXONOMY major-category label, or "".
 - Sub_categories_Action: exactly one permitted subcategory under the selected major category, or "".
 - mitigation: exactly "positive", "negative", or "".
@@ -46,22 +46,22 @@ STRICT OUTPUT VALUE CONSTRAINTS:
 Unknown fields = "", except Relation_nature="unclear", Research_type="Unclear". No null/NA, explanations, long quotations, numerical findings or extra fields.
 
 OUTPUT:
-{"development_topic":"","Major_categories_action":"","Sub_categories_Action":"","mitigation":"","adaptation":"","Relation_nature":"unclear","Research_type":""}
+{"development_topic":"","development_topic_original":"","Major_categories_action":"","Sub_categories_Action":"","action_original":"","mitigation":"","adaptation":"","Relation_nature":"unclear","Research_type":"Unclear"}
 
 DEVELOPMENT CATEGORIES:
-Resource Efficiency and Circularity; Coastal and Marine Sustainability; Sustainable Infrastructure and Urban Development; Biodiversity and Ecosystem Health; Green Energy and Economic Transition; Food Security and Sustainable Agriculture; Pollution Control and Public Health; Social Equity and Inclusive Services; Transport Accessibility and Efficiency; Urban Resilience and Risk Reduction; Water Safety and Reliability
+Resource Efficiency and Circularity; Coastal and Marine Sustainability; Sustainable Infrastructure and Urban Development; Biodiversity and Ecosystem Health; Green Energy and Economic Transition; Food Security and Sustainable Agriculture; Pollution Control and Public Health; Social Equity and Inclusive Services; Transport Accessibility and Efficiency; Flood Resilience and Stormwater Management; Thermal Comfort and Heat Reduction; Urban Resilience and Risk Reduction; Water Safety and Reliability
 
 ACTION TAXONOMY (major -> permitted subcategories):
 Agriculture & Food Systems -> Agroforestry; Dietary shifts; Improved cropland management; Reduce food loss and food waste; Soil health management
 Construction & Building -> Change in construction materials; Efficient buildings; Energy-demand avoidance; High-performance new building; Improvement building stock
 Energy Solutions -> Bioenergy; District heating & cooling networks; Energy efficiency; Energy supply / Renewables; Fuel switching; Geothermal energy; Hydropower; Resilient power systems; Solar energy; Wind energy
-Land Use & Spatial Planning -> Coastal zone management; Land use and spatial planning
-Nature-based & Ecosystem -> Ecological connectivity; Ecosystem restoration; Forest-based adaptation; Green and blue infrastructure; Green infrastructure; Ocean ecosystem services; Urban afforestation
-Resilience Enablers/Tools -> Climate services; Coastal defense and hardening; Disaster risk management; Social safety nets
+Land Use & Spatial Planning -> Climate-sensitive spatial planning; Coastal zone management; Land use and spatial planning; Urban design and public-space configuration; Urban form, density and mixed-use development; Zoning and urban growth management
+Nature-based & Ecosystem -> Ecological connectivity; Ecosystem restoration; Forest-based adaptation; Green and blue infrastructure; Green infrastructure; Ocean ecosystem services
+Resilience Enablers/Tools -> Climate services; Coastal defense and hardening; Disaster risk management; Early warning and preparedness; Emergency response and evacuation; Post-disaster recovery and relocation; Social safety nets
 Transition knowledge/Government -> Integrated Knowledge/Governance; Policy, market & funding instruments
 Transport & Mobility -> Electric light-duty vehicle tech; Fuel-efficient light-duty vehicle tech; Integrated modal-demand shift; Shared automated electric mobility systems; Non-motorized transport; Public transport; Transport fuel switching
 Waste & Circular Economy -> Circular material flows; Enhanced recycling; Solid waste management; Waste prevention, minimization and management
-Water Management -> Integrated Water Management; Stormwater Management; Water use efficiency.
+Water Management -> Integrated Water Management; Stormwater Management; Water use efficiency
 """
 
 FIELDS = [
@@ -69,7 +69,7 @@ FIELDS = [
     "Major_categories_action", "Sub_categories_Action", "action_original",
     "mitigation", "adaptation", "Relation_nature", "Research_type",
 ]
-ROUND1_FIELDS = ["city_name", "country_name", "Action_motivation", "Primary_action"]
+ROUND1_FIELDS = ["city_name", "country_name", "development_topic_original", "action_original"]
 
 
 def main():
@@ -82,21 +82,20 @@ def main():
     source_columns, source = read_csv(source_path)
     if source_columns != SOURCE_FIELDS:
         parser.error(f"Expected {SOURCE_FIELDS} in {source_path}")
-    previous = OUTPUT / "round1" / f"{args.provider}_run{args.run}.csv"
+    previous = OUTPUT / "round1_consensus.csv"
     r1_columns, r1_rows = read_csv(previous)
-    if len(r1_rows) != len(source) or not set(ROUND1_FIELDS).issubset(r1_columns):
+    if (len(r1_rows) != len(source)
+            or not {f"{field}_consensus" for field in ROUND1_FIELDS}.issubset(r1_columns)):
         parser.error(f"Round 1 is missing or incomplete: {previous}")
     for index, (original, prior) in enumerate(zip(source, r1_rows), 1):
-        if int(prior["row_id"]) != index or prior["DOI"] != original["DOI"]:
+        if any(prior[field] != original[field] for field in SOURCE_FIELDS):
             parser.error(f"Round 1 row mismatch: {previous}, row {index}")
 
     def content(index, row):
         r1 = r1_rows[index - 1]
-        if r1["Status"] != "ok":
-            return None
         return {
             "Title": row["Title"], "Abstract": row["Abstract"],
-            "Round1": {field: r1[field] for field in ROUND1_FIELDS},
+            "Round1": {field: r1[f"{field}_consensus"] for field in ROUND1_FIELDS},
         }
 
     provider_run_rows(
