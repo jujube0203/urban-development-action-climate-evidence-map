@@ -1,6 +1,8 @@
 # Urban development–climate evidence extraction
 
-Code and prompts for screening urban-study titles and abstracts and extracting **development topic–urban action–climate impact links**. 
+Code and prompts for screening urban-study titles and abstracts and extracting development topic–urban action–climate impact links. 
+The full evidence base is available at `data/urban_development_climate_evidence_database_v1.xlsx`.
+
 Use Python 3.10+. Add records to `data/input_sample.csv` .
 
 Set `DEEPSEEK_API_KEY`, `QWEN_API_KEY`, `ZHIPU_API_KEY` and `QWEN_BASE_URL` as environment variables. Model IDs and request settings are in `api_common.py`.
