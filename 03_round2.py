@@ -49,7 +49,7 @@ OUTPUT:
 {"development_topic":"","development_topic_original":"","Major_categories_action":"","Sub_categories_Action":"","action_original":"","mitigation":"","adaptation":"","Relation_nature":"unclear","Research_type":"Unclear"}
 
 DEVELOPMENT CATEGORIES:
-Resource Efficiency and Circularity; Coastal and Marine Sustainability; Sustainable Infrastructure and Urban Development; Biodiversity and Ecosystem Health; Green Energy and Economic Transition; Food Security and Sustainable Agriculture; Pollution Control and Public Health; Social Equity and Inclusive Services; Transport Accessibility and Efficiency; Flood Resilience and Stormwater Management; Thermal Comfort and Heat Reduction; Urban Resilience and Risk Reduction; Water Safety and Reliability
+Resource Efficiency and Circularity; Coastal and Marine Sustainability; Sustainable Infrastructure and Urban Development; Biodiversity and Ecosystem Health; Green Energy and Economic Transition; Food Security and Sustainable Agriculture; Pollution Control and Public Health; Social Equity and Inclusive Services; Transport Accessibility and Efficiency; Flood Resilience and Stormwater Management; Thermal Comfort and Heat Reduction; Broader Urban Resilience and Risk Reduction; Water Safety and Reliability
 
 ACTION TAXONOMY (major -> permitted subcategories):
 Agriculture & Food Systems -> Agroforestry; Dietary shifts; Improved cropland management; Reduce food loss and food waste; Soil health management
@@ -57,7 +57,7 @@ Construction & Building -> Change in construction materials; Efficient buildings
 Energy Solutions -> Bioenergy; District heating & cooling networks; Energy efficiency; Energy supply / Renewables; Fuel switching; Geothermal energy; Hydropower; Resilient power systems; Solar energy; Wind energy
 Land Use & Spatial Planning -> Climate-sensitive spatial planning; Coastal zone management; Land use and spatial planning; Urban design and public-space configuration; Urban form, density and mixed-use development; Zoning and urban growth management
 Nature-based & Ecosystem -> Ecological connectivity; Ecosystem restoration; Forest-based adaptation; Green and blue infrastructure; Green infrastructure; Ocean ecosystem services
-Resilience Enablers/Tools -> Climate services; Coastal defense and hardening; Disaster risk management; Early warning and preparedness; Emergency response and evacuation; Post-disaster recovery and relocation; Social safety nets
+Resilience Enablers/Tools -> Climate services; Coastal defense and hardening; Integrated disaster risk management; Early warning and preparedness; Emergency response and evacuation; Post-disaster recovery and relocation; Social safety nets
 Transition knowledge/Government -> Integrated Knowledge/Governance; Policy, market & funding instruments
 Transport & Mobility -> Electric light-duty vehicle tech; Fuel-efficient light-duty vehicle tech; Integrated modal-demand shift; Shared automated electric mobility systems; Non-motorized transport; Public transport; Transport fuel switching
 Waste & Circular Economy -> Circular material flows; Enhanced recycling; Solid waste management; Waste prevention, minimization and management
